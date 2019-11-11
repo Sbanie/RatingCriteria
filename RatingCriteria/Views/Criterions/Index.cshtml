@@ -1,0 +1,70 @@
+﻿@model IEnumerable<RatingCriteria.Models.criteria>
+@{
+    ViewBag.Title = "Index";
+}
+<link href="~/Content/Site.css" rel="stylesheet" />
+
+
+@*<div class="row">
+@foreach (var item in Model)
+{
+    <div class="column">
+        <div class="card">
+            <h3>@Html.DisplayFor(modelItem => item.Topic)</h3>
+            <p>@Html.DisplayFor(modelItem => item.Description)</p>
+        
+            <a href="@Url.Action(actionName: "SingleCriteria", controllerName: "Criterions", routeValues: new {id = item.AutoId})" class="btn btn-default">Rate</a>
+        </div>
+    </div>
+}
+
+</div>*@
+
+
+
+@*@foreach (var item in Model)
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Topic)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Active)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.AutoId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.AutoId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.AutoId })
+        </td>
+    </tr>
+}*@
+
+
+
+
+
+<div class="header">
+    <h2>Assessments Criteria</h2>
+</div>
+
+<div class="row">
+@foreach (var item in Model)
+{
+    <div class="leftcolumn">
+        <div class="card" style="background-color:aquamarine;">
+            <h2>@Html.DisplayFor(modelItem => item.Topic)</h2>
+            <h5>@Html.DisplayFor(modelItem=>item.AutoId)</h5>
+            
+            <p>Some text..</p>
+            <p>@Html.DisplayFor(modelItem => item.Description)</p>
+            <a href="@Url.Action(actionName: "SingleCriteria", controllerName: "Criterions", routeValues: new {id = item.AutoId})" class="btn btn-default">Rate and Comment</a>
+
+        </div>
+        
+    </div>
+}
+
+</div>

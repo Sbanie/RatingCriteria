@@ -1,0 +1,51 @@
+﻿@{
+	ViewBag.Title = "CreateRole";
+}
+
+
+<h2>Create Role</h2>
+
+
+<div class="rows">
+    <div class="col-md-12">
+
+
+        @Html.ActionLink("Dashboard", "Dashboard", "Admin")<br />
+        @Html.ActionLink("Create Role", "CreateRole", "Admin")<br />
+
+        @Html.ActionLink("Add User", "CreateUserAndAssignRole", "Admin")<br />
+    </div>
+
+</div>
+
+@using (Html.BeginForm("CreateRole", "Admin", FormMethod.Post))
+{
+
+	
+
+
+
+
+
+
+
+	<tr class="col-md-4">
+		<th>Role Name</th>
+		<td>
+			<div class="input-group">
+				<div class="input-group-addon">
+					<i class="fa fa-group"></i>
+				</div>
+				<input type="text" class="form-control" name="RoleName" />
+				
+
+			</div>
+			
+			<button type="submit" class="btn btn-primary">Add Role</button>	
+		</td>
+		
+		
+	</tr>
+	
+	
+}
